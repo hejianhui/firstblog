@@ -3,6 +3,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'rubyzip',  "~> 0.9.9"
+gem 'rails_12factor', group: :production
 group :development, :test do
     gem 'sqlite3', '1.3.7'
     gem 'rspec-rails', '2.13.1'
