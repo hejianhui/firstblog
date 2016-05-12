@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-    http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+    before_action :signed_in_user, except: [:index, :show]
     def new
         @article = Article.new
     end
@@ -8,15 +8,23 @@ class ArticlesController < ApplicationController
         @articles = Article.all
     end
 
+    def edit
+        @article = Article.find(params[:id])
+    end
+
     def show
         @article = Article.find(params[:id])
     end
 
     def create
-        @article = Article.new(article_params)
+        @article = current_user.articles.build(article_params)
 
-        @article.save
-        redirect_to @article
+        if  @article.save
+            flash[:success] = "文章已创建"
+            redirect_to @article
+        else
+            render '/'
+        end
     end
     def update
         @article = Article.find(params[:id])

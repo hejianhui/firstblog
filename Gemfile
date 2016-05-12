@@ -9,6 +9,9 @@ group :development, :test do
     gem 'rspec-rails', '2.13.1'
 end
 
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
+
 group :test do
     gem 'selenium-webdriver', '2.0.0'
     gem 'capybara', '2.1.0'
