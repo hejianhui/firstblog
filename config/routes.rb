@@ -1,4 +1,6 @@
 Firstblog::Application.routes.draw do
+    root 'static_pages#Home'
+
     resources :users
 
     resources :sessions, only: [:new, :create, :destroy]
@@ -11,14 +13,17 @@ Firstblog::Application.routes.draw do
 
     match '/signin', to: 'sessions#new', via: 'get'
     match '/signout', to: 'sessions#destroy', via: 'delete'
-    get "static_pages/Home"
-    get "static_pages/Articles"
-    get "static_pages/AboutMe"
+
+    match '/static_pages/Home', to: 'static_pages#Home', via: 'get'
+    match '/static_pages/Articles', to: 'static_pages#Articles', via: 'get'
+    match '/static_pages/AboutMe', to: 'static_pages#AboutMe', via: 'get'
+    match '/static_pages/user', to: 'static_pages#user', via: 'get'
+
+    #match '/static_pages/users', to: 'static_pages#users', via: 'get'
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
 
     # You can have the root of your site routed with "root"
-    root 'static_pages#Home'
 
     # Example of regular route:
     #   get 'products/:id' => 'catalog#view'
