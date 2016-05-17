@@ -20,10 +20,10 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.build(article_params)
 
     if  @article.save
-      flash[:success] = "文章已创建"
+      flash.now[:success] = "文章已创建"
       redirect_to @article
     else
-      render '/'
+      redirect_to root_path
     end
   end
   def update
