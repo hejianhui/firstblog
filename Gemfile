@@ -1,6 +1,7 @@
 source 'https://gems.ruby-china.org'
 ruby '2.0.0'
 gem 'rails', '4.0.0'
+gem 'simple_captcha', :git => 'git://github.com/Azdaroth/simple-captcha.git', :branch => 'rails-4'  
 gem 'bcrypt-ruby', '3.0.1'
 gem 'rubyzip',  "~> 0.9.9"
 gem 'redcarpet'
