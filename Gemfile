@@ -5,6 +5,8 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'rubyzip',  "~> 0.9.9"
 gem 'redcarpet'
 gem 'pygments.rb'
+gem 'omniauth'
+gem 'omniauth-github'
 gem 'rails_12factor', group: :production
 group :development, :test do
     gem 'sqlite3', '1.3.7'

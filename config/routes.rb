@@ -18,6 +18,8 @@ Firstblog::Application.routes.draw do
     match '/static_pages/Articles', to: 'static_pages#Articles', via: 'get'
     match '/static_pages/AboutMe', to: 'static_pages#AboutMe', via: 'get'
     match '/static_pages/user', to: 'static_pages#user', via: 'get'
+    
+    get '/auth/:provider/callback' => 'sessions#create'
 
     #match '/static_pages/users', to: 'static_pages#users', via: 'get'
     # The priority is based upon order of creation: first created -> highest priority.
