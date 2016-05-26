@@ -5,9 +5,11 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'rubyzip',  "~> 0.9.9"
 gem 'redcarpet'
 gem 'pygments.rb'
+gem 'simple_captcha2', require: 'simple_captcha'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'rails_12factor', group: :production
+gem 'acts-as-taggable-on', '~> 3.4'
 group :development, :test do
     gem 'sqlite3', '1.3.7'
     gem 'rspec-rails', '2.13.1'
