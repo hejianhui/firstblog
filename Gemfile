@@ -6,6 +6,7 @@ gem 'rubyzip',  "~> 0.9.9"
 gem 'redcarpet'
 gem 'pygments.rb'
 gem 'simple_captcha2', require: 'simple_captcha'
+gem 'dotenv-rails', :groups => [:development, :test]
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'rails_12factor', group: :production
