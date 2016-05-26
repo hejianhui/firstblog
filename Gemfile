@@ -19,7 +19,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 group :test do
     gem 'selenium-webdriver', '2.0.0'
     gem 'capybara', '2.1.0'
-    gem 'factory_girl_rails', '4.2.1'
+    gem 'factory_girl_rails'
 end
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
