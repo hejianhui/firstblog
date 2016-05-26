@@ -19,6 +19,7 @@ group :development, :test do
 end
 
 gem 'will_paginate', '3.0.4'
+gem 'paperclip'
 gem 'bootstrap-will_paginate', '0.0.9'
 
 group :test do
