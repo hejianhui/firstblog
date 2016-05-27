@@ -5,6 +5,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'rubyzip',  "~> 0.9.9"
 gem 'redcarpet'
 gem 'pygments.rb'
+gem 'protected_attributes' 
 gem 'sidekiq'
 gem 'whenever'
 gem 'simple_captcha2', require: 'simple_captcha'

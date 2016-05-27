@@ -18,8 +18,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.build(article_params)
-    @article.tag_list.add(User.find(@article.user_id))
-
     if  @article.save
       flash.now[:success] = "文章已创建"
       redirect_to @article

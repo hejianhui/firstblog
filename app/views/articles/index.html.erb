@@ -8,13 +8,11 @@
     <th>作者</th>
     <th colspan="3">可选动作</th>
   </tr>
-
+  <tr>
   <% @articles.each do |article| %>
-    <% article.tag_list.each do |info_tag| %>  
-                 <%= info_tag %>  
-               <% end %>  
       <td><%= article.title %></td>
       <td><%= article.text %></td>
+      <td><%= article.tag_list %></td>
       <td><%= User.find(article.user_id).name %></td>
       <td><%= link_to '显示', article_path(article) %></td>
       <td><%= link_to '编辑', edit_article_path(article) %></td>
