@@ -6,6 +6,7 @@ gem 'rubyzip',  "~> 0.9.9"
 gem 'redcarpet'
 gem 'pygments.rb'
 gem 'protected_attributes' 
+gem 'rest_client'
 gem 'sidekiq'
 gem 'whenever'
 gem 'simple_captcha2', require: 'simple_captcha'

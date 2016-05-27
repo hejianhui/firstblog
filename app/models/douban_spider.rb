@@ -1,4 +1,4 @@
-require 'rest-client'
+require 'rest_client'
 class DoubanSpider
   attr_accessor :json, :source_url, :method, :content
 
