@@ -10,7 +10,7 @@ doc.search('img').each do |i|
 end
 
 temp_ans = ans.map do
-  |url| url.match(/^http/) ? url : "http://ezprice.com/#{url}"
+  |url| url.match(/^http/) ? url : "http://douban.com/#{url}"
 end
 
 temp_ans.each do |full_url|
