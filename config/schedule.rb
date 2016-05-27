@@ -20,8 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 2.hours do
-  runner "Article.create"
-  runner "Article.post"
-  command "/usr/bin/echo 'hello world"
-  command "/usr/bin/poweroff"
+  command "/usr/bin/ruby ../crawl.rb"
 end
