@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527052639) do
+ActiveRecord::Schema.define(version: 20160526110300) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -31,14 +31,6 @@ ActiveRecord::Schema.define(version: 20160527052639) do
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id"
 
-  create_table "outer_articles", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "simple_captcha_data", force: true do |t|
     t.string   "key",        limit: 40
     t.string   "value",      limit: 6
@@ -47,14 +39,6 @@ ActiveRecord::Schema.define(version: 20160527052639) do
   end
 
   add_index "simple_captcha_data", ["key"], name: "idx_key"
-
-  create_table "sources", force: true do |t|
-    t.string   "source_url"
-    t.integer  "provider"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
@@ -85,8 +69,6 @@ ActiveRecord::Schema.define(version: 20160527052639) do
     t.string   "remember_token"
     t.boolean  "admin"
     t.integer  "group"
-    t.string   "encrypted_password", limit: 128
-    t.string   "confirmation_token", limit: 128
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

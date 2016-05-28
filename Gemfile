@@ -1,11 +1,11 @@
 source 'https://gems.ruby-china.org'
-ruby '2.0.0'
+ruby '2.1.2'
 gem 'rails', '4.0.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'rubyzip',  "~> 0.9.9"
 gem 'redcarpet'
 gem 'pygments.rb'
-gem 'protected_attributes' 
+gem 'protected_attributes' #stupid gem
 gem 'rest_client'
 gem 'sidekiq'
 gem 'whenever'
@@ -18,6 +18,7 @@ gem 'acts-as-taggable-on', '~> 3.4'
 group :development, :test do
     gem 'sqlite3', '1.3.7'
     gem 'rspec-rails', '2.13.1'
+    gem 'pry'
 end
 
 gem 'will_paginate', '3.0.4'
