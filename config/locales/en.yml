@@ -21,7 +21,7 @@
 
 en:
   simple_captcha:
-    placeholder: "嘿"
+    placeholder: "Enter the image value"
     label: "Enter the code in the box:"
     message:
       default: "Secret Code did not match with the Image"

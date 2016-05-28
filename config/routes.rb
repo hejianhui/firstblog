@@ -9,7 +9,7 @@ Firstblog::Application.routes.draw do
         resources :comments
     end
 
-    match '/signup', to: 'users#new', via: 'get'
+    match '/signup', to: 'users#create', via: 'get'
 
     match '/signin', to: 'sessions#new', via: 'get'
     match '/signout', to: 'sessions#destroy', via: 'delete'

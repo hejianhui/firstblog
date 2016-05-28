@@ -1,6 +1,8 @@
 class Article < ActiveRecord::Base
   belongs_to :user
   attr_accessible :tag_list
+  attr_accessible :title
+  attr_accessible :text
   has_many :comments, dependent: :destroy
   acts_as_taggable
 

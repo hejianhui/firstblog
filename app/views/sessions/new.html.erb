@@ -7,7 +7,7 @@
       <%= f.text_field :email %>
       <%= f.label :password %>
       <%= f.password_field :password %>
-      <%= show_simple_captcha(:object=>"user") %>
+	  <%= show_simple_captcha %>
       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
     <% end %>
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
